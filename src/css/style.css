@@ -112,10 +112,6 @@
   gap: 0.5rem;
 }
 
-/* .category-section .category-content {
-  margin-bottom: 24px;
-} */
-
 .category-section .content {
   margin: 0 auto;
 }
@@ -157,6 +153,7 @@
 
 .navbar {
   background-color: var(--white);
+  height: 6rem;
 }
 
 .navbar > a {
@@ -185,4 +182,62 @@
 .wishlist-container {
   max-width: 43rem;
   margin: 0 auto;
+}
+
+.product-list-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header" "sidebar list list list"
+    "sidebar list list list" "sidebar list list list" "sidebar list list list";
+  grid-gap: 1.5 rem;
+  margin-top: 4rem;
+}
+
+.product-list-container > header {
+  grid-area: header;
+}
+
+.product-list-container > .sidebar {
+  grid-area: sidebar;
+}
+
+.product-list-container > .product-list {
+  grid-area: list;
+}
+
+/*TODO: should remove once CL completes last PR */
+.input-wrapper.with-icon {
+  position: relative;
+  flex-direction: row;
+}
+
+.input-wrapper.with-icon > i {
+  color: var(--black);
+  font-size: 1.25rem;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 10;
+}
+
+.input-wrapper.with-icon .input {
+  flex-grow: 1;
+  padding-left: 3.4rem;
+}
+
+.btn-icon {
+  width: 0.9em;
+  height: 0.9em;
+  fill: currentColor;
+  margin-right: 0.5em;
+}
+
+.btn-icon.end {
+  margin-right: 0;
+  margin-left: 0.5em;
+}
+
+.p-21 {
+  padding: 0.8rem 1.25rem;
 }
