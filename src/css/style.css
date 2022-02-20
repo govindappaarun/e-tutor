@@ -1,8 +1,26 @@
 /* Import Component Library */
 @import url("https://neog-component-library-arun.netlify.app/src/components/main.css");
 
-.container {
-  /* background: var(--grey-light); */
+/* welcome page */
+#welcomepage .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  height: 100vh;
+}
+
+#welcomepage .container .left .hero {
+  max-width: 15ch;
+  margin: 0 auto;
+}
+
+#welcomepage .container .get-started {
+  margin-top: 7.5rem;
+}
+
+#welcome {
+  background-color: var(--white-cream);
 }
 
 .icons {
@@ -10,7 +28,7 @@
 }
 
 .hero-section {
-  background-color: var(--grey-bg);
+  background-color: var(--grey-light);
 }
 
 .hero-section-left {
