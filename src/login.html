@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>E Tutor - Login Page</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body id="login-page">
+    <div class="container">
+      <!-- navbar page -->
+      <nav class="navbar">
+        <div class="nav-left">
+        <div class="brand-container flex-center-y flex-gap">
+          <img
+            class="brand-logo"
+            src="../images/logo-cap.png"
+            alt="Education"
+          />
+          <div class="h3">AVON Tutor</div>
+        </div>
+        </div>
+        <div class="nav-right">
+          <button class="btn btn-link btn-link-secondary">Don't Have Account ?</button>
+          <button class="btn btn-outline-secondary">Create Account</button>
+        </div>
+      </nav>
+
+      <main>
+        <div class="wallpaper flex-center-x">
+          <img loading="lazy" src="../images/computer-desk.png" class="img-responsive" />
+        </div>
+        <div class="form-container">
+          <h1 class="text-center secondary">Sign In To Your Account</h1>
+          <form action="#" class="flex-column flex-gap">
+            <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input
+                class="input"
+                type="text"
+                id="email"
+                placeholder="Email Address"
+              />
+            </div>
+            <div class="input-wrapper">
+              <label for="password">Password</label>
+              <input
+                class="input"
+                type="text"
+                id="password"
+                placeholder="Create Password"
+              />
+            </div>
+            <div class="flex-center-y flex-space-between">
+              <div class="flex-center-y flex-gap">
+                <input type="checkbox" id="remember" />
+                <label for="remember">Remember Me</label>
+              </div>
+              <div>
+                <div class="btn btn-secondary">
+                  Sign In <i class="fas fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+          </form>
+      </main>
+    </div>
+  </body>
+</html>
