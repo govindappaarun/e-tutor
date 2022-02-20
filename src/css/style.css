@@ -186,11 +186,12 @@
 
 .product-list-container {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     "header header header header" "sidebar list list list"
     "sidebar list list list" "sidebar list list list" "sidebar list list list";
   grid-gap: 1.5 rem;
-  margin-top: 4rem;
+  margin: 4rem 2rem;
 }
 
 .product-list-container > header {
@@ -203,6 +204,10 @@
 
 .product-list-container > .product-list {
   grid-area: list;
+}
+
+.group .header i:first-child {
+  font-size: 1.5rem;
 }
 
 /*TODO: should remove once CL completes last PR */
