@@ -159,8 +159,13 @@
   background-color: var(--white);
 }
 
-.navbar a {
+.navbar > a {
   text-decoration: none;
+}
+
+.nav-right > a,
+.nav-right > .btn {
+  flex-shrink: 0;
 }
 
 #login-page .navbar,
