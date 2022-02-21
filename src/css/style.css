@@ -1,0 +1,266 @@
+/* Import Component Library */
+@import url("https://neog-component-library-arun.netlify.app/src/components/main.css");
+
+/* welcome page */
+#welcomepage .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  height: 100vh;
+}
+
+#welcomepage .container .left .hero {
+  max-width: 15ch;
+  margin: 0 auto;
+}
+
+#welcomepage .container .get-started {
+  margin-top: 7.5rem;
+}
+
+#welcome {
+  background-color: var(--white-cream);
+}
+
+.icons {
+  font-size: 1.5rem;
+}
+
+.hero-section {
+  background-color: var(--grey-light);
+}
+
+.hero-section-left {
+  align-items: center;
+}
+
+.hero-section-left .h1 {
+  max-width: 16ch;
+}
+
+.hero-section-left .sub-title {
+  max-width: 50ch;
+}
+
+#login-page main,
+#signup-page main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: calc(100vh - 120px);
+  place-items: center;
+}
+
+.wallpaper {
+  grid-column: 1 / span 6;
+  background-color: #ebebff;
+}
+
+.form-container {
+  grid-column: 7 / span 6;
+  margin: 0 30px;
+}
+
+@media screen and (max-width: 850px) {
+  .wallpaper {
+    display: none;
+  }
+  .form-container {
+    grid-column: 1/12;
+  }
+}
+
+.product-list {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  grid-gap: 1.25rem;
+  width: 90%;
+}
+
+.categories {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  grid-gap: 1.25rem;
+  width: 90%;
+}
+
+.category-content {
+  display: inline-flex;
+  padding: 20px;
+}
+
+.category-content:hover {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.category-content-left {
+  height: 64px;
+  width: 64px;
+  margin-right: 40px;
+  background-color: var(---white);
+  transition: all 0.3s;
+  line-height: 64px;
+  background-color: var(--white);
+}
+
+.category-content-right {
+  align-items: start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.category-section .content {
+  margin: 0 auto;
+}
+
+.hero-section {
+  height: calc(100vh - 100px - 100px);
+}
+
+.hero-section-right {
+  max-width: 50%;
+  height: 548px;
+  --webkit-clip-path: polygon(18% 0, 100% 0%, 99% 97%, 2% 100%);
+  clip-path: polygon(18% 0, 100% 0%, 99% 97%, 2% 100%);
+}
+
+.footer {
+  padding: 2rem;
+  background-color: var(--black);
+  justify-content: space-between;
+}
+
+.footer-container ul {
+  flex-grow: 1;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links li:first-child {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-links a {
+  color: var(--grey-main);
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: var(--white);
+  height: 6rem;
+}
+
+.navbar > a {
+  text-decoration: none;
+}
+
+.nav-right > a,
+.nav-right > .btn {
+  flex-shrink: 0;
+}
+
+#login-page .navbar,
+#signup-page .navbar {
+  box-shadow: none;
+}
+
+.wallpaper {
+  height: 100%;
+}
+
+.actions .btn,
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.wishlist-container {
+  max-width: 43rem;
+  margin: 0 auto;
+}
+
+.product-list-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "header header header header" "sidebar list list list"
+    "sidebar list list list" "sidebar list list list" "sidebar list list list";
+  grid-gap: 1.5 rem;
+  margin: 4rem 2rem;
+}
+
+.product-list-container > header {
+  grid-area: header;
+}
+
+.product-list-container > .sidebar {
+  grid-area: sidebar;
+}
+
+.product-list-container > .product-list {
+  grid-area: list;
+}
+
+.group .header i:first-child {
+  font-size: 1.5rem;
+}
+
+.group {
+  padding: 5px 15px;
+  border: 1px solid var(--grey-light);
+}
+
+.group-header,
+.group-item {
+  cursor: pointer;
+}
+
+.group-header .active {
+  color: var(--warning-light);
+}
+
+.group-item {
+  margin: 10px 0;
+}
+
+/*TODO: should remove once CL completes last PR */
+.input-wrapper.with-icon {
+  position: relative;
+  flex-direction: row;
+}
+
+.input-wrapper.with-icon > i {
+  color: var(--black);
+  font-size: 1.25rem;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 10;
+}
+
+.input-wrapper.with-icon .input {
+  flex-grow: 1;
+  padding-left: 3.4rem;
+}
+
+.btn-icon {
+  width: 0.9em;
+  height: 0.9em;
+  fill: currentColor;
+  margin-right: 0.5em;
+}
+
+.btn-icon.end {
+  margin-right: 0;
+  margin-left: 0.5em;
+}
+
+.p-21 {
+  padding: 0.8rem 1.25rem;
+}
