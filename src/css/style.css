@@ -210,6 +210,24 @@
   font-size: 1.5rem;
 }
 
+.group {
+  padding: 5px 15px;
+  border: 1px solid var(--grey-light);
+}
+
+.group-header,
+.group-item {
+  cursor: pointer;
+}
+
+.group-header .active {
+  color: var(--warning-light);
+}
+
+.group-item {
+  margin: 10px 0;
+}
+
 /*TODO: should remove once CL completes last PR */
 .input-wrapper.with-icon {
   position: relative;
