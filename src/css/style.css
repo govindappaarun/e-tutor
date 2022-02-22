@@ -2,6 +2,7 @@
 @import url("https://neog-component-library-arun.netlify.app/src/components/main.css");
 
 /* welcome page */
+/* welcome page */
 #welcomepage .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -10,17 +11,46 @@
   height: 100vh;
 }
 
-#welcomepage .container .left .hero {
+#welcomepage .hero {
   max-width: 15ch;
   margin: 0 auto;
 }
 
-#welcomepage .container .get-started {
+#welcomepage .get-started {
   margin-top: 7.5rem;
 }
 
-#welcome {
-  background-color: var(--white-cream);
+#welcomepage .right {
+  margin: 3.5rem;
+}
+
+@media (max-width: 825px) {
+  #welcomepage .container {
+    grid-template-columns: 1fr;
+  }
+
+  #welcomepage .hero {
+    font-size: 7vw;
+  }
+
+  #welcomepage .right {
+    margin: 3.5rem 12rem;
+    grid-row: 1;
+  }
+  #welcomepage .get-started {
+    margin: 3.5rem 0;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  #welcomepage .hero {
+    font-size: 10vw;
+  }
+
+  #welcomepage .right {
+    margin: 3.5rem;
+    grid-row: 1;
+  }
 }
 
 .icons {
@@ -121,10 +151,24 @@
 }
 
 .hero-section-right {
-  max-width: 50%;
-  height: 548px;
   --webkit-clip-path: polygon(18% 0, 100% 0%, 99% 97%, 2% 100%);
   clip-path: polygon(18% 0, 100% 0%, 99% 97%, 2% 100%);
+}
+
+@media screen and (max-width: 1040px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-section-left {
+    margin: 3rem 0;
+  }
+
+  .hero-section-right {
+    margin: 3rem 0;
+    clip-path: none;
+  }
 }
 
 .footer {
@@ -153,7 +197,7 @@
 
 .navbar {
   background-color: var(--white);
-  height: 6rem;
+  min-height: 5rem;
 }
 
 .navbar > a {
@@ -165,6 +209,14 @@
   flex-shrink: 0;
 }
 
+@media screen and (max-width: 750px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+}
+
 #login-page .navbar,
 #signup-page .navbar {
   box-shadow: none;
@@ -174,14 +226,18 @@
   height: 100%;
 }
 
+.wallpaper img {
+  max-width: 650px;
+}
+
 .actions .btn,
 .flex-shrink-0 {
   flex-shrink: 0;
 }
 
 .wishlist-container {
-  max-width: 43rem;
-  margin: 0 auto;
+  max-width: 50rem;
+  margin: 5rem auto;
 }
 
 .product-list-container {
@@ -226,41 +282,4 @@
 
 .group-item {
   margin: 10px 0;
-}
-
-/*TODO: should remove once CL completes last PR */
-.input-wrapper.with-icon {
-  position: relative;
-  flex-direction: row;
-}
-
-.input-wrapper.with-icon > i {
-  color: var(--black);
-  font-size: 1.25rem;
-  left: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
-  z-index: 10;
-}
-
-.input-wrapper.with-icon .input {
-  flex-grow: 1;
-  padding-left: 3.4rem;
-}
-
-.btn-icon {
-  width: 0.9em;
-  height: 0.9em;
-  fill: currentColor;
-  margin-right: 0.5em;
-}
-
-.btn-icon.end {
-  margin-right: 0;
-  margin-left: 0.5em;
-}
-
-.p-21 {
-  padding: 0.8rem 1.25rem;
 }
